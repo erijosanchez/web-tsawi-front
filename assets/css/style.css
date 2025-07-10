@@ -82,6 +82,10 @@ body {
     text-transform: uppercase;
 }
 
+.logo-link {
+    text-decoration: none;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -371,14 +375,15 @@ body {
 }
 
 .features-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 300;
     text-align: center;
     margin-bottom: 30px;
     color: var(--text-color-logo);
     letter-spacing: 3px;
     position: relative;
+    text-transform: uppercase;
+    background-clip: text;
 }
 
 .features-subtitle {
@@ -475,13 +480,14 @@ body {
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 300;
     text-align: center;
     margin-bottom: 30px;
     color: var(--text-color-logo);
     letter-spacing: 3px;
+    text-transform: uppercase;
+    background-clip: text;
 }
 
 .section-subtitle {
