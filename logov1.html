@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Tsawi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            max-width: 800px;
+        }
+
+        .logo-versions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 100%;
+        }
+
+        .logo-version {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-version:hover {
+            transform: translateY(-5px);
+        }
+
+        .logo-version h3 {
+            margin: 0 0 20px 0;
+            color: #2c3e50;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Logo Principal */
+        .main-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .butterfly-icon {
+            width: 50px;
+            height: 50px;
+            position: relative;
+        }
+
+        .butterfly-wing {
+            position: absolute;
+            background: linear-gradient(45deg, #e91e63, #9c27b0);
+            border-radius: 50% 10px 50% 10px;
+            animation: flutter 2s ease-in-out infinite;
+        }
+
+        .wing-left {
+            width: 20px;
+            height: 25px;
+            top: 8px;
+            left: 5px;
+            transform-origin: bottom right;
+        }
+
+        .wing-right {
+            width: 20px;
+            height: 25px;
+            top: 8px;
+            right: 5px;
+            transform-origin: bottom left;
+            transform: scaleX(-1);
+        }
+
+        .wing-left-bottom {
+            width: 15px;
+            height: 20px;
+            bottom: 8px;
+            left: 8px;
+            transform-origin: top right;
+        }
+
+        .wing-right-bottom {
+            width: 15px;
+            height: 20px;
+            bottom: 8px;
+            right: 8px;
+            transform-origin: top left;
+            transform: scaleX(-1);
+        }
+
+        .butterfly-body {
+            position: absolute;
+            width: 2px;
+            height: 35px;
+            background: #333;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 1px;
+        }
+
+        .butterfly-body::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 8px;
+            background: #333;
+            top: -2px;
+            left: -2px;
+            border-radius: 50%;
+        }
+
+        @keyframes flutter {
+            0%, 100% { transform: rotateY(0deg); }
+            50% { transform: rotateY(15deg); }
+        }
+
+        .brand-text {
+            font-size: 36px;
+            font-weight: 300;
+            color: #2c3e50;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* Logo Minimalista */
+        .minimal-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .minimal-butterfly {
+            width: 30px;
+            height: 30px;
+            stroke: #e91e63;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .minimal-text {
+            font-size: 28px;
+            font-weight: 200;
+            color: #2c3e50;
+            letter-spacing: 2px;
+        }
+
+        /* Logo Circular */
+        .circular-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e91e63, #9c27b0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .circular-logo::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            top: -20px;
+            left: -20px;
+        }
+
+        .circular-butterfly {
+            width: 40px;
+            height: 40px;
+            fill: white;
+            margin-bottom: 5px;
+        }
+
+        .circular-text {
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Logo Horizontal */
+        .horizontal-logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px 20px;
+            border: 2px solid #e91e63;
+            border-radius: 30px;
+        }
+
+        .horizontal-text {
+            font-size: 24px;
+            font-weight: 400;
+            color: #e91e63;
+            letter-spacing: 2px;
+        }
+
+        .description {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            max-width: 600px;
+        }
+
+        .description h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .description p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo-versions">
+            <div class="logo-version">
+                <h3>Logo Principal</h3>
+                <div class="main-logo">
+                    <div class="butterfly-icon">
+                        <div class="wing-left butterfly-wing"></div>
+                        <div class="wing-right butterfly-wing"></div>
+                        <div class="wing-left-bottom butterfly-wing"></div>
+                        <div class="wing-right-bottom butterfly-wing"></div>
+                        <div class="butterfly-body"></div>
+                    </div>
+                    <div class="brand-text">Tsawi</div>
+                </div>
+            </div>
+
+            <div class="logo-version">
+                <h3>Logo Minimalista</h3>
+                <div class="minimal-logo">
+                    <svg class="minimal-butterfly" viewBox="0 0 100 100">
+                        <path d="M50 20 C30 10, 10 30, 30 50 C20 60, 30 80, 50 70 C70 80, 80 60, 70 50 C90 30, 70 10, 50 20 Z"/>
+                        <line x1="50" y1="20" x2="50" y2="80"/>
+                        <circle cx="50" cy="25" r="3"/>
+                    </svg>
+                    <div class="minimal-text">tsawi</div>
+                </div>
+            </div>
+
+            <div class="logo-version">
+                <h3>Logo Circular</h3>
+                <div class="circular-logo">
+                    <svg class="circular-butterfly" viewBox="0 0 100 100">
+                        <path d="M50 20 C30 10, 10 30, 30 50 C20 60, 30 80, 50 70 C70 80, 80 60, 70 50 C90 30, 70 10, 50 20 Z"/>
+                        <line x1="50" y1="20" x2="50" y2="80" stroke="white" stroke-width="2"/>
+                        <circle cx="50" cy="25" r="3"/>
+                    </svg>
+                    <div class="circular-text">Tsawi</div>
+                </div>
+            </div>
+
+            <div class="logo-version">
+                <h3>Logo Horizontal</h3>
+                <div class="horizontal-logo">
+                    <svg class="minimal-butterfly" viewBox="0 0 100 100" style="width: 25px; height: 25px; stroke: #e91e63;">
+                        <path d="M50 20 C30 10, 10 30, 30 50 C20 60, 30 80, 50 70 C70 80, 80 60, 70 50 C90 30, 70 10, 50 20 Z"/>
+                        <line x1="50" y1="20" x2="50" y2="80"/>
+                        <circle cx="50" cy="25" r="3"/>
+                    </svg>
+                    <div class="horizontal-text">TSAWI</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="description">
+            <h2>Tsawi - Significado y Concepto</h2>
+            <p><strong>Tsawi</strong> significa "mariposa" en awajún (lengua amazónica del Perú). El logo representa la transformación, la elegancia y la libertad femenina. La mariposa simboliza la metamorfosis y el renacimiento, perfecto para una marca de ropa que acompaña a las mujeres en su evolución personal y estilo.</p>
+            <p>Los colores rosado y morado evocan feminidad, sofisticación y creatividad. El diseño es versátil y puede adaptarse a diferentes aplicaciones: desde etiquetas pequeñas hasta grandes carteles publicitarios.</p>
+        </div>
+    </div>
+</body>
+</html>
