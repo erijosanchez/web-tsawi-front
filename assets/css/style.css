@@ -28,20 +28,18 @@ body {
 /* Header mejorado */
 .header {
     position: fixed;
-    top: 0;
+    top: 30px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(233, 30, 98, 0.1);
+    background: rgba(255, 255, 255, 0);
     z-index: 1000;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
 }
 
 .header.scrolled {
     padding: 10px 0;
     background: rgba(255, 255, 255, 0.98);
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.12);
+    top: 0;
 }
 
 .nav-container {
@@ -50,7 +48,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 20px;
+    padding: 15px 20px;
 }
 
 .logo {
@@ -337,8 +335,8 @@ body {
     background: linear-gradient(135deg, var(--rosa-logo), var(--violet-logo));
     color: var(--white);
     text-align: center;
-    padding: 12px 20px;
-    font-size: 0.9rem;
+    padding: 8px 20px;
+    font-size: 0.7rem;
     font-weight: 400;
     letter-spacing: 1px;
     position: relative;
@@ -1078,7 +1076,7 @@ body {
 }
 
 .slide-1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&h=1080&fit=crop');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/img/hero-img/hero-img-1.jpg');
 }
 
 .slide-2 {
