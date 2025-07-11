@@ -76,6 +76,45 @@
         </div>
     </header>
 
+    <!-- Hero Section New Arrival -->
+    <section class="hero-section-newarrival">
+        <div class="background-slider-newarrival">
+            <div class="slide slide-1 active"></div>
+            <div class="slide slide-2"></div>
+            <div class="slide slide-3"></div>
+        </div>
+
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+
+        <div class="hero-content-newarrival">
+            <h1 class="hero-title">NUEVA COLECCIÓN</h1>
+            <h2 class="hero-subtitle-newarrival">Estilo que define tu personalidad</h2>
+            <p class="hero-description-newarrival">
+                Descubre las últimas tendencias en moda con nuestra colección exclusiva.
+                Diseños únicos que combinan elegancia, comodidad y estilo contemporáneo.
+            </p>
+            <div class="cta-buttons-newarrival">
+                <a href="#" class="btn-newarrival btn-primary-newarrival">Explorar Colección</a>
+                <a href="#" class="btn-newarrival btn-secondary-newarrival">Ver Lookbook</a>
+            </div>
+        </div>
+
+        <div class="slide-indicators">
+            <div class="indicator active" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+        </div>
+
+        <div class="scroll-indicator">
+            ↓ Desliza para ver más
+        </div>
+    </section>
+
     <!-- Featured Products -->
     <section class="featured-products" id="coleccion">
         <div class="featured-products-container">
@@ -233,6 +272,59 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Auto-slide every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Manual slide control
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.background-slider');
+            const speed = scrolled * 0.5;
+            parallax.style.transform = `translateY(${speed}px)`;
+        });
+
+        // Add hover effects to floating elements
+        const floatingElements = document.querySelectorAll('.floating-element');
+        floatingElements.forEach(element => {
+            element.addEventListener('mouseenter', function () {
+                this.style.background = 'rgba(255, 255, 255, 0.2)';
+                this.style.transform = 'scale(1.1)';
+            });
+
+            element.addEventListener('mouseleave', function () {
+                this.style.background = 'rgba(255, 255, 255, 0.1)';
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -64,3 +64,5 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.slide-up').forEach(el => {
     observer.observe(el);
 });
+
+// <<<<<<<<<< SLIDER SECTION SCRIPTS >>>>>>>>>>>>>>>
