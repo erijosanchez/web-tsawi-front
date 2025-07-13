@@ -28,7 +28,7 @@ body {
 /* Header mejorado */
 .header {
     position: fixed;
-    top: 30px;
+    top: 40px;
     width: 100%;
     background: rgba(255, 255, 255, 0);
     z-index: 1000;
@@ -36,7 +36,7 @@ body {
 }
 
 .header.scrolled {
-    padding: 10px 0;
+    padding: 8px 0;
     background: rgba(255, 255, 255, 0.98);
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.12);
     top: 0;
@@ -48,7 +48,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 6px 20px;
 }
 
 .logo {
@@ -1080,11 +1080,11 @@ body {
 }
 
 .slide-2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1920&h=1080&fit=crop');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/img/hero-img/hero-img-2.jpg');
 }
 
 .slide-3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=1920&h=1080&fit=crop');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/img/hero-img/hero-img-3.jpg');
 }
 
 .hero-content-newarrival {
