@@ -32,7 +32,7 @@ body {
     width: 100%;
     background: rgba(255, 255, 255, 0);
     z-index: 1000;
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
 }
 
 .header.scrolled {
@@ -1076,15 +1076,15 @@ body {
 }
 
 .slide-1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/img/hero-img/hero-img-1.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/img/hero-img/hero-img-1.webp');
 }
 
 .slide-2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/img/hero-img/hero-img-2.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/img/hero-img/hero-img-2.webp');
 }
 
 .slide-3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/img/hero-img/hero-img-3.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/img/hero-img/hero-img-3.webp');
 }
 
 .hero-content-newarrival {
@@ -1104,14 +1104,14 @@ body {
     pointer-events: none;
 }
 
-.floating-element {
+.floating-element-v {
     position: absolute;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     animation: float 6s ease-in-out infinite;
 }
 
-.floating-element:nth-child(1) {
+.floating-element-v:nth-child(1) {
     width: 80px;
     height: 80px;
     top: 20%;
@@ -1119,7 +1119,7 @@ body {
     animation-delay: 0s;
 }
 
-.floating-element:nth-child(2) {
+.floating-element-v:nth-child(2) {
     width: 60px;
     height: 60px;
     top: 60%;
@@ -1127,7 +1127,7 @@ body {
     animation-delay: 2s;
 }
 
-.floating-element:nth-child(3) {
+.floating-element-v:nth-child(3) {
     width: 100px;
     height: 100px;
     bottom: 20%;
@@ -1135,7 +1135,7 @@ body {
     animation-delay: 4s;
 }
 
-.floating-element:nth-child(4) {
+.floating-element-v:nth-child(4) {
     width: 40px;
     height: 40px;
     top: 30%;
