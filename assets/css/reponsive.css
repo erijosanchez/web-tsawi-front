@@ -1,0 +1,13 @@
+/* Tablets */
+@media (max-width: 1024px) {
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Celulares */
+@media (max-width: 640px) {
+    .collection-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
