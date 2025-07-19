@@ -5,6 +5,80 @@
     }
 }
 
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-actions {
+        gap: 15px;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        letter-spacing: 6px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-cta {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .features-grid,
+    .products-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        border-radius: 15px;
+    }
+
+    .newsletter-input,
+    .newsletter-btn {
+        border-radius: 15px;
+    }
+
+    .section-title,
+    .features-title {
+        font-size: 2.5rem;
+    }
+}
+
+
 /* Celulares */
 @media (max-width: 640px) {
     .collection-grid {
