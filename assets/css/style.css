@@ -639,7 +639,6 @@ body {
 
 }
 
-
 .section-title {
     font-size: 3rem;
     font-weight: 300;
@@ -680,9 +679,8 @@ body {
 }
 
 .product-image {
-    height: 300px;
+    height: 450px;
     background: linear-gradient(135deg, var(--light-gray), #e8f5e8);
-    display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
@@ -704,8 +702,24 @@ body {
     opacity: 1;
 }
 
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    position: absolute;
+}
+
 .product-info {
-    padding: 25px;
+    z-index: 2;
+    padding: 1rem 1rem;
+    background: rgba(255, 255, 255, 0);
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    left: 30px;
+    text-align: center;
+    justify-items: center;
 }
 
 .product-title {
@@ -721,13 +735,6 @@ body {
     font-weight: 500;
     color: var(--rosa-logo);
     margin-bottom: 15px;
-}
-
-.product-description {
-    font-size: 0.95rem;
-    color: var(--medium-gray);
-    line-height: 1.6;
-    margin-bottom: 20px;
 }
 
 .product-btn {
