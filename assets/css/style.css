@@ -696,40 +696,63 @@ body {
 
 .product-card {
     background: var(--white);
-    border-radius: 2px;
+    border-radius: 1px;
     overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .product-image {
     height: 450px;
     background: linear-gradient(135deg, var(--light-gray), #e8f5e8);
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
+    width: 100%;
     color: var(--rosa-logo);
     position: relative;
     overflow: hidden;
-}
-
-.product-image::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(45deg, transparent, rgba(233, 30, 98, 0.05), transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.product-card:hover .product-image::before {
-    opacity: 1;
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     z-index: 1;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.product-image img:last-child {
     position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.product-card:hover .product-image img:last-child {
+    opacity: 1;
+}
+
+.product-image-circle {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+.product-image-circle a {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.product-image-circle a img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .product-info {
@@ -741,9 +764,8 @@ body {
 }
 
 .product-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1em;
+    font-weight: 500;
     margin-bottom: 10px;
     color: var(--text-color-logo);
 }
