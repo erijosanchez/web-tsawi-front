@@ -497,8 +497,8 @@ body {
 .section-subtitle-1 {
     white-space: nowrap;
     color: white;
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 0.9rem;
+    font-weight: 400;
     letter-spacing: 0.5px;
     margin: 0;
     padding-right: 50px;
@@ -508,8 +508,8 @@ body {
 .slider-container-collection {
     width: 100%;
     overflow: hidden;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 20px 0;
+    background: linear-gradient(135deg, var(--rosa-logo), var(--violet-logo));
+    padding: 10px 0;
     position: relative;
 }
 
@@ -595,7 +595,7 @@ body {
     background: rgba(255, 255, 255, 0);
     position: absolute;
     z-index: 2;
-    bottom: 20px;
+    bottom: 10px;
     left: 20px;
     text-align: left;
     justify-items: left;
@@ -604,7 +604,7 @@ body {
 .title-collection-img {
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--text-color-logo);
+    color: var(--white);
     margin-bottom: 10px;
     text-transform: uppercase;
 }
@@ -614,11 +614,10 @@ body {
     margin-top: 5px;
     align-items: center;
     justify-content: center;
-    padding: 5px 30px;
-    background: transparent;
+    padding: 4px 60px 4px 4px;
+    background: var(--rosa-logo);
     border: 1px solid var(--rosa-logo);
-    border-radius: 1px;
-    color: var(--rosa-logo);
+    color: var(--white);
     font-weight: 500;
     letter-spacing: 1px;
     cursor: pointer;
@@ -627,9 +626,9 @@ body {
 }
 
 .view-details-btn:hover {
-    background: var(--rosa-logo);
+    background: #c61e56e8;
     color: var(--white);
-    stroke: var(--white);
+    border: 1px solid #c61e56e8;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(233, 30, 98, 0.2);
 }
@@ -637,8 +636,8 @@ body {
 .view-details-btn svg {
     width: 26px;
     height: 26px;
-    stroke: var(--rosa-logo);
-    stroke-width: 1.5;
+    stroke: var(--white);
+    stroke-width: 4;
     fill: none;
     margin-right: 5px;
 }
