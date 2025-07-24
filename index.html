@@ -13,7 +13,7 @@
     <meta name="keywords" content="moda femenina, ropa elegante, tsawi, mariposa, transformación">
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
 
 </head>
 
@@ -107,6 +107,67 @@
             </div>
         </div>
     </section>
+
+    <!-- Overlay newlester -->
+    <button class="trigger-btn" onclick="openModal()">
+        🔥 ¡Ofertas Exclusivas!
+    </button>
+
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+                <div class="modal-icon">✨</div>
+                <h3 class="modal-title">¡Oferta Especial!</h3>
+                <p class="modal-subtitle">Solo por tiempo limitado</p>
+            </div>
+
+            <div class="modal-body">
+                <div class="offer-badge">50% OFF + Envío Gratis</div>
+                <p class="modal-text">
+                    Obtén un <strong>50% de descuento</strong> en tu primera compra y <strong>envío gratis</strong> en
+                    pedidos superiores a $50. ¡Esta oferta expira en 24 horas!
+                </p>
+
+                <form class="modal-form" onsubmit="handleSubmit(event)">
+                    <div class="input-group">
+                        <input type="text" class="modal-input" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" class="modal-input" placeholder="Tu mejor email" required>
+                    </div>
+                    <button type="submit" class="modal-btn">Obtener mi descuento</button>
+                </form>
+
+                <div class="benefits">
+                    <div class="benefit">
+                        <div class="benefit-icon">🚚</div>
+                        <div class="benefit-text">Envío Gratis</div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">🔄</div>
+                        <div class="benefit-text">30 días cambios</div>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">⭐</div>
+                        <div class="benefit-text">Calidad Premium</div>
+                    </div>
+                </div>
+
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <span class="trust-icon">✓</span>
+                        <span>Más de 10,000 clientes</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">✓</span>
+                        <span>Compra 100% segura</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OVERLAY -->
 
     <!-- Collection Section -->
     <div class="slider-container-collection">
@@ -391,93 +452,162 @@
     </section>
 
     <!-- Features Section -->
-    <section class="banner" >
+    <section class="banner">
         <div class="banner-container">
             <img src="" alt="">
         </div>
     </section>
 
 
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonios">
-        <div class="testimonials-container">
-            <h2 class="section-title">Lo Que Dicen Nuestras Clientas</h2>
-            <p class="section-subtitle">
-                Historias reales de mujeres que han vivido la experiencia Tsawi
-            </p>
-            
-            <div class="testimonials-slider">
-                <div class="testimonials-track" id="testimonialsTrack">
-                    <div class="testimonial-card active">
-                        <p class="testimonial-text">
-                            "Tsawi no solo vende ropa, vende confianza. Cada vez que uso una de sus prendas me siento
-                            empoderada y elegante. La calidad es excepcional y el diseño simplemente perfecto."
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">M</div>
-                            <div class="testimonial-info">
-                                <h4>María González</h4>
-                                <p>Empresaria</p>
-                            </div>
-                        </div>
+    <!-- Productos detacados -->
+    <section class="featured-products" id="coleccion">
+        <div class="featured-products-container">
+            <h2 class="section-title-lm">LO MÁS DESTACADO</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/img/product-img/product-1.webp" alt="">
+                        <img src="assets/img/product-img/product-2.webp" alt="">
                     </div>
-                    
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">
-                            "La atención personalizada de Tsawi es incomparable. Me ayudaron a encontrar el outfit perfecto
-                            para mi boda civil. Cada detalle fue pensado para que me sintiera única en mi día especial."
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">A</div>
-                            <div class="testimonial-info">
-                                <h4>Ana Lucía Pérez</h4>
-                                <p>Diseñadora</p>
-                            </div>
+                    <div class="product-info">
+                        <div class="product-image-circle">
+                            <a href="/">
+                                <img src="assets/img/product-img/product-1.webp" alt="">
+                            </a>
+                            <a href="">
+                                <img src="assets/img/collections-img/collection-2.webp" alt="">
+                            </a>
                         </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">
-                            "Llevo años buscando una marca que combine elegancia y sostenibilidad. Tsawi superó mis
-                            expectativas. Cada pieza es una obra de arte que cuida tanto el estilo como el planeta."
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">S</div>
-                            <div class="testimonial-info">
-                                <h4>Sofia Mendoza</h4>
-                                <p>Consultora</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">
-                            "El servicio al cliente de Tsawi es excepcional. Desde el primer contacto hasta la entrega, todo fue perfecto. La ropa llegó impecable y el empaque es una experiencia en sí misma."
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">C</div>
-                            <div class="testimonial-info">
-                                <h4>Carmen Rodríguez</h4>
-                                <p>Abogada</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">
-                            "Tsawi ha redefinido mi guardarropa. Cada pieza es versátil, elegante y de una calidad que perdura. Es la inversión perfecta para la mujer moderna que valora el estilo auténtico."
-                        </p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">L</div>
-                            <div class="testimonial-info">
-                                <h4>Lucía Vásquez</h4>
-                                <p>Arquitecta</p>
-                            </div>
-                        </div>
+                        <h3 class="product-title">Vestido Ethereal</h3>
+                        <p class="product-price">S/. 299</p>
                     </div>
                 </div>
-            </div>
-            
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/img/product-img/product-2.webp" alt="">
+                        <img src="assets/img/product-img/product-3.webp" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-image-circle">
+                            <a href="/">
+                                <img src="assets/img/product-img/product-4.webp" alt="">
+                            </a>
+                            <a href="">
+                                <img src="assets/img/collections-img/collection-3.webp" alt="">
+                            </a>
+                        </div>
+                        <h3 class="product-title">Blusa Metamorphosis</h3>
+                        <p class="product-price">S/. 189</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/img/product-img/product-3.webp" alt="">
+                        <img src="assets/img/product-img/product-4.webp" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-image-circle">
+                            <a href="/">
+                                <img src="assets/img/product-img/product-4.webp" alt="">
+                            </a>
+                            <a href="">
+                                <img src="assets/img/collections-img/collection-3.webp" alt="">
+                            </a>
+                        </div>
+                        <h3 class="product-title">Conjunto Aurora</h3>
+                        <p class="product-price">S/. 459</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/img/product-img/product-4.webp" alt="">
+                        <img src="assets/img/product-img/product-1.webp" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-image-circle">
+                            <a href="/">
+                                <img src="assets/img/product-img/product-4.webp" alt="">
+                            </a>
+                            <a href="">
+                                <img src="assets/img/collections-img/collection-3.webp" alt="">
+                            </a>
+                        </div>
+                        <h3 class="product-title">Falda Chrysalis</h3>
+                        <p class="product-price">S/. 229</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/img/product-img/product-1.webp" alt="">
+                        <img src="assets/img/collections-img/collection-4.webp" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-image-circle">
+                            <a href="/">
+                                <img src="assets/img/product-img/product-4.webp" alt="">
+                            </a>
+                            <a href="">
+                                <img src="assets/img/collections-img/collection-3.webp" alt="">
+                            </a>
+                        </div>
+                        <h3 class="product-title">Vestido Ethereal</h3>
+                        <p class="product-price">S/. 299</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/img/product-img/product-2.webp" alt="">
+                        <img src="assets/img/collections-img/collection-1.webp" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-image-circle">
+                            <a href="/">
+                                <img src="assets/img/product-img/product-4.webp" alt="">
+                            </a>
+                            <a href="">
+                                <img src="assets/img/collections-img/collection-3.webp" alt="">
+                            </a>
+                        </div>
+                        <h3 class="product-title">Blusa Metamorphosis</h3>
+                        <p class="product-price">S/. 189</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/img/product-img/product-2.webp" alt="">
+                        <img src="assets/img/collections-img/collection-1.webp" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-image-circle">
+                            <a href="/">
+                                <img src="assets/img/product-img/product-4.webp" alt="">
+                            </a>
+                            <a href="">
+                                <img src="assets/img/collections-img/collection-3.webp" alt="">
+                            </a>
+                        </div>
+                        <h3 class="product-title">Blusa Metamorphosis</h3>
+                        <p class="product-price">S/. 189</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/img/product-img/product-2.webp" alt="">
+                        <img src="assets/img/collections-img/collection-1.webp" alt="">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-image-circle">
+                            <a href="/">
+                                <img src="assets/img/product-img/product-4.webp" alt="">
+                            </a>
+                            <a href="">
+                                <img src="assets/img/collections-img/collection-3.webp" alt="">
+                            </a>
+                        </div>
+                        <h3 class="product-title">Blusa Metamorphosis</h3>
+                        <p class="product-price">S/. 189</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -606,9 +736,12 @@
                 this.style.transform = 'scale(1)';
             });
         });
+
+        
     </script>
     <!-- Scripts-->
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/modal.js"></script>
 </body>
 
 </html>
