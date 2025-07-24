@@ -66,3 +66,45 @@ document.querySelectorAll('.slide-up').forEach(el => {
 });
 
 // <<<<<<<<<< SLIDER SECTION SCRIPTS >>>>>>>>>>>>>>>
+// Testimonials slider functionality
+
+let testimonialCurrentIndex = 0;
+const testimonialTotalCards = 5;
+const testimonialTrackElement = document.getElementById('testimonialsTrack');
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+let testimonialAutoInterval;
+
+function updateTestimonialSlider() {
+    const testimonialCardWidth = 320;
+    const testimonialGap = 30;
+    const testimonialOffset = testimonialCurrentIndex * (testimonialCardWidth + testimonialGap);
+    
+    testimonialTrackElement.style.transform = `translateX(-${testimonialOffset}px)`;
+    
+    testimonialCards.forEach((card, index) => {
+        card.classList.toggle('active', index === testimonialCurrentIndex);
+    });
+}
+
+function nextTestimonialSlide() {
+    testimonialCurrentIndex = (testimonialCurrentIndex + 1) % testimonialTotalCards;
+    updateTestimonialSlider();
+}
+
+function startTestimonialAuto() {
+    testimonialAutoInterval = setInterval(nextTestimonialSlide, 3000);
+}
+
+function stopTestimonialAuto() {
+    clearInterval(testimonialAutoInterval);
+}
+
+// Inicializar slider cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+    updateTestimonialSlider();
+    startTestimonialAuto();
+
+    const testimonialSliderContainer = document.querySelector('.testimonials-slider');
+    testimonialSliderContainer.addEventListener('mouseenter', stopTestimonialAuto);
+    testimonialSliderContainer.addEventListener('mouseleave', startTestimonialAuto);
+});
